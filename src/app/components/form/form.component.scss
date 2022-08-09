@@ -19,6 +19,16 @@
     height: 42px;
   }
 
+  button {
+    background-color: #21092F;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
   .group {
     display: flex;
     gap: 10px;
