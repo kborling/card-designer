@@ -1,7 +1,24 @@
 <form class="card-form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate [ngFormOptions]="{updateOn: 'blur'}">
-  <input name="cardNumber" ngModel required #cardNumber="ngModel" placeholder="Card Number">
-  <input name="cardHolder" ngModel placeholder="CardHolder Name">
-  <input name="cardExpiration" ngModel placeholder="Expiration Date">
-  <input name="cardCvv" ngModel placeholder="CVV">
-  <!-- <button>Submit</button> -->
+  <div class="input-group">
+    <label for="cardHolder">Cardholder Name</label>
+    <input name="cardHolder" ngModel placeholder="e.g. Jane Appleseed">
+  </div>
+  <div class="input-group">
+    <label for="cardNumber">Card Number</label>
+    <input name="cardNumber" ngModel required #cardNumber="ngModel" placeholder="e.g. 4242 4242 4242 4242">
+  </div>
+  <div class="group">
+    <div class="input-group">
+      <label for="cardExpiration">Exp. Date (MM/YY)</label>
+      <div class="group">
+        <input name="cardExpirationMonth" ngModel placeholder="MM">
+        <input name="cardExpirationYear" ngModel placeholder="YY">
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="cardCvv">CVV</label>
+      <input name="cardCvv" ngModel placeholder="e.g. 123">
+    </div>
+  </div>
+  <!-- <button>Confirm</button> -->
 </form>
