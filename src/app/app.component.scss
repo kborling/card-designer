@@ -1,11 +1,3 @@
-$mono-font: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-$sans-font: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-
-body {
-  font-family: $mono-font;
-  margin: 0 !important;
-}
-
 .main {
   display: flex;
   height: 100vh;
