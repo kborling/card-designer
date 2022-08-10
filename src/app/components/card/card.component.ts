@@ -8,12 +8,16 @@ import { Card } from 'src/app/models/card';
 })
 export class CardComponent implements OnInit {
 
-  // @Input()
-  // card: Card
+  @Input() cardHolder: string = "";
+  @Input() cardNumber: string = "";
+  @Input() cardExpMonth: string = "";
+  @Input() cardExpYear: string = "";
+  @Input() cardCvv: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.cardHolder)
   }
 
 }

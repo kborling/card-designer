@@ -2,37 +2,29 @@
   <div class="card card-front">
     <div class="card-top">
       <div class="card-logo">
-        <div class="circle">
-
-        </div>
-        <div class="circle-small">
-
-        </div>
+        <div class="circle"></div>
+        <div class="circle-small"></div>
       </div>
     </div>
     <div class="card-bottom">
-
-
       <div class="card-number">
-        <span>4242 4242 4242 4242</span>
+        <span>{{cardNumber}}</span>
       </div>
       <div class="card-details">
         <div class="card-holder">
-          Jane Appleseed
+          {{cardHolder}}
         </div>
         <div class="card-expiration">
-          08/26
+          {{cardExpMonth}}/{{cardExpYear}}
         </div>
       </div>
     </div>
   </div>
 
   <div class="card card-back">
-    <div class="card-strip">
-
-    </div>
+    <div class="card-strip"></div>
     <div class="card-cvv">
-      123
+      {{cardCvv}}
     </div>
     <div class="card-terms">
       Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo eget magna? Neque, gravida in fermentum et, sollicitudin ac!

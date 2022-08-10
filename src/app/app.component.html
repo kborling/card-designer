@@ -11,10 +11,22 @@
   <body>
     <main class="main">
       <section class="col section-card">
-        <app-card></app-card>
+        <app-card
+          [cardHolder]="cardHolder"
+          [cardNumber]="cardNumber"
+          [cardExpMonth]="cardExpMonth"
+          [cardExpYear]="cardExpYear"
+          [cardCvv]="cardCvv"
+        ></app-card>
       </section>
       <section class="col section-form">
-        <app-form></app-form>
+        <app-form
+          (cardHolderEvent)="updateCardHolder($event)"
+          (cardNumberEvent)="updateCardNumber($event)"
+          (cardExpMonthEvent)="updateCardExpMonth($event)"
+          (cardExpYearEvent)="updateCardExpYear($event)"
+          (cardCvvEvent)="updateCardCvv($event)"
+        ></app-form>
       </section>
     </main>
   </body>

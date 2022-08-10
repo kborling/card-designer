@@ -3,5 +3,5 @@ export interface Card {
   cardNumber: string;
   cardExpirationMonth: string;
   cardExpirationYear: string;
-  cardCvv: number;
+  cardCvv?: number;
 }

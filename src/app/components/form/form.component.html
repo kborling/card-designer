@@ -1,23 +1,43 @@
 <form class="card-form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate [ngFormOptions]="{updateOn: 'blur'}">
   <div class="input-group">
     <label for="cardHolder">Cardholder Name</label>
-    <input name="cardHolder" ngModel placeholder="e.g. Jane Appleseed">
+    <input name="cardHolder"
+      [ngModel]="card.cardHolder"
+      (ngModelChange)="updateCardHolder($event)"
+      placeholder="e.g. Jane Appleseed" required>
   </div>
   <div class="input-group">
     <label for="cardNumber">Card Number</label>
-    <input name="cardNumber" ngModel required #cardNumber="ngModel" placeholder="e.g. 4242 4242 4242 4242">
+    <input name="cardNumber"
+      [ngModel]="card.cardNumber"
+      (ngModelChange)="updateCardNumber($event)"
+      placeholder="e.g. 4242 4242 4242 4242" required>
   </div>
   <div class="group">
     <div class="input-group">
       <label for="cardExpiration">Exp. Date (MM/YY)</label>
       <div class="group">
-        <input name="cardExpirationMonth" ngModel placeholder="MM">
-        <input name="cardExpirationYear" ngModel placeholder="YY">
+        <input
+          name="cardExpirationMonth"
+          [ngModel]="card.cardExpirationMonth"
+          (ngModelChange)="updateCardExpMonth($event)"
+          placeholder="MM" required>
+        <input
+          name="cardExpirationYear"
+          [ngModel]="card.cardExpirationYear"
+          (ngModelChange)="updateCardExpYear($event)"
+          placeholder="YY"
+          required>
       </div>
     </div>
     <div class="input-group">
       <label for="cardCvv">CVV</label>
-      <input name="cardCvv" ngModel placeholder="e.g. 123">
+      <input
+        name="cardCvv"
+        [ngModel]="card.cardCvv"
+        (ngModelChange)="updateCardCvv($event)"
+        placeholder="e.g. 123"
+        required>
     </div>
   </div>
   <button>Confirm</button>
